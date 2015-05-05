@@ -704,8 +704,8 @@ console.log('------Functions ----------');
     //turn code into function check
 
 
-var value1 = "sunny";
-var value2 = 10;
+var value1 = "overcast";
+var value2 = 5;
 
 var moodFN = function(weather, waves) {
 
