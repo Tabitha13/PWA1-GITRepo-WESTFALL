@@ -171,7 +171,11 @@ console.log('------ arrays ----------');
 
  */
    var myArr = ['bond', 007, function(){}, true];
-
+    console.log("index 0: ", myArr[0]);
+    console.log("index 1: ", myArr[1]);
+    console.log("index 2: ", myArr[2]);
+    console.log("index 3: ", myArr[3]);
+    console.log("index 4: ", myArr[4]);
  /*
     - arrays can hold any value type, separated by comma
     - arrays are indexed numerically, beginning at 0
@@ -189,8 +193,13 @@ console.log('------ arrays ----------');
     1.  create an array with 4 numbers 10, 50, 100, 200
     2.  console.log the sum of all the numbers in an array
 
- ********************************************/
 
+
+ ********************************************/
+     console.log("Student Activity 1");
+    var numArray = [10, 50, 100, 200];
+    console.log(numArray[1]);
+    console.log(numArray[0] + numArray[1] + numArray[2] + numArray[3]);
 
 
 /*******************************************
@@ -207,6 +216,9 @@ console.log('------ arrays ----------');
     3. output array items using string concatenation
 
  ********************************************/
+console.log("Student Activity 2");
+var myArray= ['baseball', 'football', 'basketball'];
+console.log("Index 0 = ",  myArray[0],"Index 1 = ",  myArray[1], "Index 2 = ",  myArray[2]);
 
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
