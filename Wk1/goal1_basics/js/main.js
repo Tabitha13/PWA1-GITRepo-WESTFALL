@@ -559,9 +559,18 @@ console.log('------Functions ----------');
 
      - type the below as an example
         functionName();
- *****************************
+ *****************************/
 
+    var myctr = 1;
 
+    var myCounter = function(){
+        var testVar = 0;
+        myctr++;
+        console.log('counter = ', myctr);
+
+    };
+    myCounter();
+    myCounter();
 
 
  /*
@@ -598,7 +607,14 @@ console.log('------Functions ----------');
     - in the function - var1 and var2 are referred to as parameters of the function
     - items inside our function we call on these variables.. such as:
  */
+    var value1 = 1;
+    var value2 = 2;
 
+    var myFn = function(var1, var2){
+        console.log('function number: ', var1 + var2);
+    };
+
+    myFn(value1, value2);
 
 
 
@@ -614,6 +630,15 @@ console.log('------Functions ----------');
      6.  console.log the results
  ********************************************/
 
+    var myctr = 1;
+
+    var myCounter = function(newct){
+        myctr += newct;
+      console.log('counter = ', myctr);
+
+    };
+    myCounter(5);
+    myCounter(2);
 
 
 
@@ -627,6 +652,11 @@ console.log('------Functions ----------');
     - the called function should be assigned to a variable (i.e name - see below)
  ********************************************/
 
+    var myFn = function(){
+        return'jamesBond'
+    };
+    var name = myFn();
+    console.log('name: ', name);
 
 
     // if a return gives back no value, it instead returns “undefined”
@@ -644,8 +674,21 @@ console.log('------Functions ----------');
             output the same info
     4.  console.log the results
  ********************************************/
+    var myctr = 1;
+
+    var myCounter = function(newct){
+    // var myctr = 50;
+     myctr += newct;
+    return myctr;
 
 
+    };
+
+    var cnt = myCounter(5);
+    console.log('counter = ', cnt);
+
+   var cnt = myCounter(2);
+    console.log('counter = ', cnt);
 
 
 /*******************************************
@@ -658,3 +701,38 @@ console.log('------Functions ----------');
  5. console.log the Results
  ********************************************/
 
+    //turn code into function check
+
+
+var value1 = "sunny";
+var value2 = 10;
+
+var moodFN = function(weather, waves) {
+
+    if (weather == "sunny") {
+        if (waves === 10) {
+            bobsMood = "pumped";
+        } else if ((waves < 9) && (waves >= 5)) {
+            bobsMood = "mellow";
+        } else {
+            bobsMood = "bummed";
+        }
+
+    } else if (weather === "overcast") {
+        if ((waves < 10) && (waves >= 7)) {
+            bobsMood = "jacked up";
+        } else if (!((waves <= 6) && (waves >= 3))) {
+            bobsMood = "sad";
+        } else {
+            bobsMood = "totally bummed";
+        }
+    } else {
+        bobsMood = "sad";
+
+    };
+    return bobsMood; //step 2
+};
+
+var moodType = moodFN(value1, value2); //step 3
+
+console.log("bobs mood is ", moodType);
