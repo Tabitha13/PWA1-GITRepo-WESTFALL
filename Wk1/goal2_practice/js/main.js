@@ -444,6 +444,11 @@ console.log('------ While / Loop ----------');
 
 console.log('------For Loop ----------');
 
+    for (var beers =10; beers > 0; beers--){
+        console.log(beers + ' bottles of beers on the wall.')
+    }
+
+
 
 	/* 
 		array.Length
@@ -457,6 +462,8 @@ console.log('------For Loop ----------');
 			- the  .length property returns the count, which would be 5	
 	*/	
 
+        var myNums = [1, 2, 3, 4, 5];
+        console.log('length: ', myNums.length);
 
 	/* 
 		using the for() loop with .length
@@ -477,6 +484,9 @@ console.log('------For Loop ----------');
 			save the array length in a variable, inside the first statement
 	*/
 
+    for(var i= 0, j=myNums.length; i<j; i++){
+        console.log(myNums[i]);
+    };
 
 	/*
 		BREAK...
