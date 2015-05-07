@@ -1,7 +1,7 @@
 /*
-     Name:
-     Date:
-     Class & Section:  PWA1-####
+     Name: Tabitha Westfall
+     Date: May 6th 2015
+     Class & Section:  PWA1-0515
      Comments: "Goal 2: JavaScript Practice"
  */
 
@@ -412,6 +412,12 @@ console.log('------ MORE Functions ----------');
 			}			
 */
 console.log('------ While / Loop ----------');
+
+    var numOfBeers = 10;
+    while(numOfBeers >0) {
+        console.log(numOfBeers + ' kegs on the wall.');
+        numOfBeers--;
+    }
 
 	
 /*
