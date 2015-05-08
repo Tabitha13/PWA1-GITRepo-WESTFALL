@@ -22,7 +22,7 @@ Assignment: Goal 1: Asssignment: Duel #1
     var playerOneHealth = 100;
     var playerTwoHealth = 100;
 
-    var round = 1;
+    var round = 0;
 
 
     function fight(){
@@ -41,14 +41,47 @@ Assignment: Goal 1: Asssignment: Duel #1
 
             //console.log(f1);
             //console.log(f2);
-            // code will go here
+
+            //inflict damanage
+            playerOneHealth-= f1;
+            playerTwoHealth-= f2;
+
+            console.log(playerOneName+':'+playerOneHealth+"  "+playerTwoName+":"+playerTwoHealth);
+
+            var results = winnerCheck();
+            console.log(results);
+
+            if(results==="no winner"){
+                round++;
+                alert(playerOneName+':'+playerOneHealth+" *Round "+ round+" is over * "+playerTwoName+":"+playerTwoHealth);
+
+            }else{
+                alert(results);
+                break;
+            };
+
+
         };
 
     };
 
     function winnerCheck(){
-    //code will go here};
-    }
+
+        console.log("in winner check function");
+
+        var result ="no winner";
+
+        if(playerOneHealth<1 && playerTwoHealth<1){
+            result = "You both die";
+        }else if (playerOneHealth<1){
+            result =playerTwoName+ " wins!!"
+        }else if (playerTwoHealth<1){
+            result =playerOneName+ " wins!!"
+        };
+
+        return result;
+
+    };
 
 
 
