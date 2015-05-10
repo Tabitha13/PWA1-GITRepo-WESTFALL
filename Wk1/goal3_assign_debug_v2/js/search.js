@@ -37,6 +37,7 @@
 	};
 	
 	// Finds search matches
+
 	var search = function(query)
 		
 		// split the user's search query string into an array
@@ -70,8 +71,10 @@
 		results.sort();
 		
 		// Check that matches were found, and run output functions
+        // if results is equal to 0 show no match
 		if(results.length = 0){
 			noMatch();
+            // or else show the result
 		}else{
 			showMatches(results);
 		};
