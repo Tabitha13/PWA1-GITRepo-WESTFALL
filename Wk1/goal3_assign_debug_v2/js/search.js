@@ -82,7 +82,8 @@
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){
-		var html = ''+
+		//display message styled
+        var html = ''+
 			'<p>No Results found.</p>'+
 			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
 		;
@@ -93,12 +94,14 @@
 	var showMatches = function(results){
 		
 		// THE NEXT 4 LINES ARE CORRECT.
-		var html = '<p>Results</p>', 
+		//shows the html attribute for variable
+		 var html = '<p>Results</p>',
 			title, 
 			url
 		;
 		
 		// loop through all the results search() function
+        // if i=0, j equals result length, but i is greater then, and increment i variables
 		for(var i=0, j=results.length; i<j; i++){
 		
 			// title of video ends with pipe
@@ -118,8 +121,8 @@
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function(){
-		var query = searchInput.value;
-		validqte(query);
+		var query = searchInput.value; //query equals the search value
+		validqte(query); // validates the code
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
