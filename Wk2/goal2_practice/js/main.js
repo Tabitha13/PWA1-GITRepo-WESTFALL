@@ -345,6 +345,9 @@ console.log('------ MORE Operators - typeof() ----------');
 
 console.log('------ MORE Conditionals - Switch ----------');
 
+
+    x
+
 /*******************************************
  STUDENT ACTIVITY 6:
 
