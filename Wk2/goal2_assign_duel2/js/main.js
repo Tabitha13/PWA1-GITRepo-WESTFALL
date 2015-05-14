@@ -10,7 +10,10 @@ Assignment: Goal 1: Asssignment: Duel #1
 
     console.log('fight');
 
-    //names
+
+    var spiderArr = ["Spiderman", 20, 100];
+    var batArr = ["Batman", 20, 100];
+   /* //names
     var playerOneName = "Spiderman";
     var playerTwoName = "Batman";
 
@@ -21,6 +24,7 @@ Assignment: Goal 1: Asssignment: Duel #1
     //health
     var playerOneHealth = 100;
     var playerTwoHealth = 100;
+    */
 
     var round = 0;
 
