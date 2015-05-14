@@ -31,33 +31,33 @@ Assignment: Goal 1: Asssignment: Duel #1
 
     function fight(){
         console.log('in the fight function');
-        alert(playerOneName+':'+playerOneHealth+" *START* "+playerTwoName+":"+playerTwoHealth);
+        alert(spiderArr[0]+':'+spiderArr[2]+" *START* "+batArr[0]+":"+spiderArr[2]);
 
         //loop that makes program go 10 times
         for(var i=0; i<10; i++) {
             //random formula is - Math.floor(Math.random() * (max-min) +(min);
 
-            var minDamage1 = player1Damage *.5;
-            var minDamage2 = player2Damage *.5;
+            var minDamage1 = spiderArr[1] *.5;
+            var minDamage2 = batArr[1] *.5;
 
-            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+(minDamage1));
-            var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+(minDamage2));
+            var f1 = Math.floor(Math.random()*(spiderArr[1]-minDamage1)+(minDamage1));
+            var f2 = Math.floor(Math.random()*(batArr[1]-minDamage2)+(minDamage2));
 
             //console.log(f1);
             //console.log(f2);
 
             //inflict damanage
-            playerOneHealth-= f1;
-            playerTwoHealth-= f2;
+            spiderArr[2]-= f1;
+            batArr[2]-= f2;
 
-            console.log(playerOneName+':'+playerOneHealth+"  "+playerTwoName+":"+playerTwoHealth);
+            console.log(spiderArr[0]+':'+spiderArr[2]+"  "+batArr[0]+":"+batArr[2]);
 
             var results = winnerCheck();
             console.log(results);
 
             if(results==="no winner"){
                 round++;
-                alert(playerOneName+':'+playerOneHealth+" *Round "+ round+" is over * "+playerTwoName+":"+playerTwoHealth);
+                alert(spiderArr[0]+':'+spiderArr[2]+" *Round "+ round+" is over * "+batArr[0]+":"+batArr[2]);
 
             }else{
                 alert(results);
@@ -75,12 +75,12 @@ Assignment: Goal 1: Asssignment: Duel #1
 
         var result ="no winner";
 
-        if(playerOneHealth<1 && playerTwoHealth<1){
+        if(spiderArr[2]<1 && batArr[2]<1){
             result = "You both die";
-        }else if (playerOneHealth<1){
-            result =playerTwoName+ " wins!!"
-        }else if (playerTwoHealth<1){
-            result =playerOneName+ " wins!!"
+        }else if (spiderArr[2] <1){
+            result =batArr[0]+ " wins!!"
+        }else if (batArr[2]<1){
+            result =spiderArr[0]+ " wins!!"
         };
 
         return result;
