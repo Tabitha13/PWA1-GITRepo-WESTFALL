@@ -33,11 +33,13 @@ Assignment: Goal 1: Asssignment: Duel #1
     var round = 0;
     var btn = document.querySelectorAll('fight_btn a');
     //console.log(btn);
+    var spider = document.querySelectorAll('kabal p');
+    var bat = document.querySelectorAll('kratos p');
 
 
 
-   btn.onclick= function fight(){
-      //  console.log('in the fight function');
+   function fight(){
+      console.log('in the fight function');
        // alert(fighter1.name+':'+fighter1.health+" *START* "+fighter2.name+":"+fighter2.health);
 
 
@@ -61,15 +63,17 @@ Assignment: Goal 1: Asssignment: Duel #1
 
             console.log(fighter1.name+':'+fighter1.health+"  "+fighter2.name+":"+fighter2.health);
 
+
+
             var results = winnerCheck();
             console.log(results);
 
             if(results==="no winner"){
                 round++;
-                alert(fighter1.name+':'+fighter1.health+" *Round "+ round+" is over * "+fighter2.name+":"+fighter2.health);
+               // alert(fighter1.name+':'+fighter1.health+" *Round "+ round+" is over * "+fighter2.name+":"+fighter2.health);
 
             }else{
-                alert(results);
+               // alert(results);
                 break;
             };
 
@@ -101,7 +105,7 @@ Assignment: Goal 1: Asssignment: Duel #1
     /*** Program starts below! ***/
 
     console.log('program starts');
-   fight();
+    fight();
 
 })();
 
