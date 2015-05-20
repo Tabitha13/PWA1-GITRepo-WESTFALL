@@ -10,9 +10,9 @@ Assignment: Goal 1: Asssignment: Duel #1
 
     console.log('fight');
 
-    fighter1 = {name:Spiderman, damage:20, health:100};
-    fighter2 = {name:Batman, damage:20, health:100};
-    
+    fighter1 = {name:'Spiderman', damage:20, health:100};
+    fighter2 = {name:'Batman', damage:20, health:100};
+
     /*  var spiderArr = ["Spiderman", 20, 100];
     var batArr = ["Batman", 20, 100];
    //names
@@ -33,33 +33,33 @@ Assignment: Goal 1: Asssignment: Duel #1
 
     function fight(){
         console.log('in the fight function');
-        alert(spiderArr[0]+':'+spiderArr[2]+" *START* "+batArr[0]+":"+spiderArr[2]);
+        alert(fighter1.name+':'+fighter1.health+" *START* "+fighter2.name+":"+fighter2.health);
 
         //loop that makes program go 10 times
         for(var i=0; i<10; i++) {
             //random formula is - Math.floor(Math.random() * (max-min) +(min);
 
-            var minDamage1 = spiderArr[1] *.5;
-            var minDamage2 = batArr[1] *.5;
+            var minDamage1 = fighter1.damage *.5;
+            var minDamage2 = fighter2.damage *.5;
 
-            var f1 = Math.floor(Math.random()*(spiderArr[1]-minDamage1)+(minDamage1));
-            var f2 = Math.floor(Math.random()*(batArr[1]-minDamage2)+(minDamage2));
+            var f1 = Math.floor(Math.random()*(fighter1.damage-minDamage1)+(minDamage1));
+            var f2 = Math.floor(Math.random()*(fighter2.damage-minDamage2)+(minDamage2));
 
             //console.log(f1);
             //console.log(f2);
 
             //inflict damanage
-            spiderArr[2]-= f1;
-            batArr[2]-= f2;
+            fighter1.health-= f1;
+            fighter2.health-= f2;
 
-            console.log(spiderArr[0]+':'+spiderArr[2]+"  "+batArr[0]+":"+batArr[2]);
+            console.log(fighter1.name+':'+fighter1.health+"  "+fighter2.name+":"+fighter2.health);
 
             var results = winnerCheck();
             console.log(results);
 
             if(results==="no winner"){
                 round++;
-                alert(spiderArr[0]+':'+spiderArr[2]+" *Round "+ round+" is over * "+batArr[0]+":"+batArr[2]);
+                alert(fighter1.name+':'+fighter1.health+" *Round "+ round+" is over * "+fighter2.name+":"+fighter2.health);
 
             }else{
                 alert(results);
@@ -73,16 +73,16 @@ Assignment: Goal 1: Asssignment: Duel #1
 
     function winnerCheck(){
 
-        console.log("in winner check function");
+       // console.log("in winner check function");
 
         var result ="no winner";
 
-        if(spiderArr[2]<1 && batArr[2]<1){
+        if(fighter1.health<1 && fighter2.health<1){
             result = "You both die";
-        }else if (spiderArr[2] <1){
-            result =batArr[0]+ " wins!!"
-        }else if (batArr[2]<1){
-            result =spiderArr[0]+ " wins!!"
+        }else if (fighter1.health <1){
+            result =fighter2.name+ " wins!!"
+        }else if (fighter2.health<1){
+            result =fighter1.name+ " wins!!"
         };
 
         return result;
