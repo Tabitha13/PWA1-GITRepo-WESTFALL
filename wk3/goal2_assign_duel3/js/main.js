@@ -13,8 +13,10 @@ Assignment: Goal 1: Asssignment: Duel #1
     fighter1 = {name:'Spiderman', damage:20, health:100};
     fighter2 = {name:'Batman', damage:20, health:100};
 
-    /*  var spiderArr = ["Spiderman", 20, 100];
+    /*
+    var spiderArr = ["Spiderman", 20, 100];
     var batArr = ["Batman", 20, 100];
+
    //names
     var playerOneName = "Spiderman";
     var playerTwoName = "Batman";
@@ -29,14 +31,19 @@ Assignment: Goal 1: Asssignment: Duel #1
     */
 
     var round = 0;
+    var btn = document.querySelectorAll('fight_btn a');
+    //console.log(btn);
 
 
-    function fight(){
-        console.log('in the fight function');
-        alert(fighter1.name+':'+fighter1.health+" *START* "+fighter2.name+":"+fighter2.health);
+
+   btn.onclick= function fight(){
+      //  console.log('in the fight function');
+       // alert(fighter1.name+':'+fighter1.health+" *START* "+fighter2.name+":"+fighter2.health);
+
+
 
         //loop that makes program go 10 times
-        for(var i=0; i<10; i++) {
+       for(var i=0; i<10; i++) {
             //random formula is - Math.floor(Math.random() * (max-min) +(min);
 
             var minDamage1 = fighter1.damage *.5;
@@ -48,7 +55,7 @@ Assignment: Goal 1: Asssignment: Duel #1
             //console.log(f1);
             //console.log(f2);
 
-            //inflict damanage
+            //inflict damage
             fighter1.health-= f1;
             fighter2.health-= f2;
 
@@ -92,8 +99,9 @@ Assignment: Goal 1: Asssignment: Duel #1
 
 
     /*** Program starts below! ***/
+
     console.log('program starts');
-    fight();
+   fight();
 
 })();
 
