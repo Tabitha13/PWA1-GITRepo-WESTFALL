@@ -40,7 +40,7 @@ Assignment: Goal 1: Asssignment: Duel #1
 
    function fight(){
       console.log('in the fight function');
-       // alert(fighter1.name+':'+fighter1.health+" *START* "+fighter2.name+":"+fighter2.health);
+       alert(fighter1.name+':'+fighter1.health+" *START* "+fighter2.name+":"+fighter2.health);
 
 
 
@@ -60,6 +60,9 @@ Assignment: Goal 1: Asssignment: Duel #1
             //inflict damage
             fighter1.health-= f1;
             fighter2.health-= f2;
+           document.querySelector('kabal').innerHTML = fighter1.health-=f1;
+           document.querySelector('kratos').innerHTML = fighter2.health-=f2;
+
 
             console.log(fighter1.name+':'+fighter1.health+"  "+fighter2.name+":"+fighter2.health);
 
@@ -105,7 +108,9 @@ Assignment: Goal 1: Asssignment: Duel #1
     /*** Program starts below! ***/
 
     console.log('program starts');
-    fight();
+    fight(
+
+    );
 
 })();
 
