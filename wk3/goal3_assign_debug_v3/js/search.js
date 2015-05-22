@@ -1,11 +1,12 @@
 // Create privatized scope using a self-executing function
+
 (function () {
 
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
     //variables to define results
 
-    console.log("hello");
-	var validate;
+
+	//var validate;
     var resultsDIV = document.getElementById("results"),
 		searchInput = document.forms[0].search,
 		currentSearch = ''
@@ -13,69 +14,66 @@
 
 	// Validates search query
     //
-    validate = function (query) {
-
-        // Trim whitespace from start and end of search query
-        //creates loop to search query specifically substring 1 and display length
-        while (query.charAt(0) == " ") {
-            query = query.substring(1, query.length);
-        }
-
-        //loop for substring 0
-        while (query.charAt(query.length - 1) === "") {
-            query = query.substring(0, query.length - 1);
+   var validate = function(query) {
 
 
-            // Check search length, must have 3 characters
-            //displays alert box if the query length is less than 3
-            if (query.length < 3) {
-                alert("Your search query is too small, try again.");
+       // Trim whitespace from start and end of search query
+       //creates loop to search query specifically substring 1 and display length
+       while (query.charAt(0) === " ") {
+           query = query.substring(1, query.length);
+       };
 
-                // (DO NOT FIX THE LINE DIRECTLY BELOW)
-                //returns value to function
-                searchInput.focus();
-                return;
-            }
-            ;
+       //loop for substring 0
+       while (query.charAt(query.length - 1) === " ") {
+           query = query.substring(0, query.length - 1);
+       };
 
-            search(query);
-        }
-        ;
+
+       // Check search length, must have 3 characters
+       //displays alert box if the query length is less than 3
+       if (query.length < 3) {
+           alert("Your search query is too small, try again.");
+
+           // (DO NOT FIX THE LINE DIRECTLY BELOW)
+           //returns value to function
+           searchInput.focus();
+           return;
+       };
+
+       search(query);
+   };
 
         // Finds search matches
 
         var search = function (query) {
 
             // split the user's search query string into an array
-            var queryArray = query.join(" ");
+            var queryArray = query.split(" ");
 
             // array to store matched results from database.js
             var results = [];
 
             // loop through each index of db array
-            for (var i = 0, j = db.length; i < j; i++) {
+            for (var i=0, j = db.length; i < j; i++) {
 
                 // each db[i] is a single video item, each title ends with a pipe "|"
                 // save a lowercase variable of the video title
                 var dbTitleEnd = db[i].indexOf('|');
-                var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+                var dbItem = db[i].toLowerCase().substring(0, dbTitleEnd);
 
                 // loop through the user's search query words
                 // save a lowercase variable of the search keyword
                 for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {
-                    var qitem = queryArray[ii].tolowercase();
+                    var qItem = queryArray[ii].ToLowerCase();
 
                     // is the keyword anywhere in the video title?
                     // If a match is found, push full db[i] into results array
-                    var compare = dbitem.indexOf(qitem);
+                    var compare = dbItem.indexOf(qItem);
                     if (compare !== -1) {
                         results.push(db[i]);
-                    }
-                    ;
-                }
-                ;
-            }
-            ;
+                    };
+                };
+            };
 
             results.sort();
 
@@ -123,9 +121,8 @@
                 url = results[i].substring(results[i].indexOf('|') + 1, results[i].length);
 
                 // make the video link - THE NEXT LINE IS CORRECT.
-                html += '<p><a href=' + url + '>' + title + '</a></p>';
-            }
-            ;
+                html += '<p> <a href=' + url + '>' + title + '</a> </p>';
+            };
             resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
         };
 
@@ -133,7 +130,7 @@
         // THE LINE DIRECTLY BELOW IS CORRECT
 
 
-        document.forms[0].onsubmit = function () {
+        document.forms[0].onSubmit = function () {
             var query = searchInput.value; //query equals the search value
             validate(query); // validates the code
 
@@ -141,6 +138,7 @@
             // THE LINE DIRECTLY BELOW IS CORRECT
             return false;
 
-console.log("hello???")
+
         };
-    };});
+    });
+

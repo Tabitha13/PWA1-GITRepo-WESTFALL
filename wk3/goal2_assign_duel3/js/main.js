@@ -10,6 +10,10 @@ Assignment: Goal 1: Asssignment: Duel #1
 
     console.log('fight');
 
+    var button= document.getElementById('fight_btn');
+
+    button.addEventListener("click", fight, false);
+
     fighter1 = {name:'Spiderman', damage:20, health:100};
     fighter2 = {name:'Batman', damage:20, health:100};
 
@@ -31,7 +35,7 @@ Assignment: Goal 1: Asssignment: Duel #1
     */
 
     var round = 0;
-    var btn = document.querySelectorAll('fight_btn a');
+
     //console.log(btn);
     var spider = document.querySelectorAll('kabal p');
     var bat = document.querySelectorAll('kratos p');
