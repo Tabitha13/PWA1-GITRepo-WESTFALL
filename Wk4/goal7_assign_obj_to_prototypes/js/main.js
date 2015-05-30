@@ -9,11 +9,7 @@
 Names display in arrow
 ex: Tabitha, Cameron, Ryan, Ben and Caitlin
 
-jobs in array
-ex: doctor, teacher, mechanic, cop and realtor
 
-actions in array
-ex: eat, sleep, walk, potty and bathe
 
 for loop
 loops 3 times and chooses 3 random names and 3 random jobs = all static
